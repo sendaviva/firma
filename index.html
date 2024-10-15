@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container {
-            max-width: 600px;
+            max-width: 900px;
         }
 
         .form-group {
@@ -64,13 +64,14 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<script id="firma-content" type="text/x-handlebars-template"><table border="0" cellpadding="0" cellspacing="0" align="center" style="font-family:Open Sans, sans-serif; padding: 0; margin: 0 auto; width: 900px">
+<script id="firma-content" type="text/x-handlebars-template">
+  <table border="0" cellpadding="0" cellspacing="0" align="center" style="font-family:Open Sans, sans-serif; padding: 0; margin: 0 auto; max-width: 900px;width: 100%;">
   <tr>
     <td>
       <table border="0" cellpadding="0" cellspacing="0" align="center"
-        style="font-family:Open Sans, sans-serif; padding: 0; margin: 0 auto; width: 900px">
+        style="font-family:Open Sans, sans-serif; padding: 0; margin: 0 auto; max-width: 900px;width: 100%;">
         <tr>
-          <td>
+          <td style="width: 315px;">
             <img src="https://sendaviva.github.io/firma/images/logo.png">
           </td>
           <td style="font-size: 12px;">
@@ -79,24 +80,22 @@
             Carretera del Yugo, s/n<br>
             31513, Arguedas<br>
             Tfno.: 948 088 100 / Fax: 948 088 101
-          </td>
-          <td style="vertical-align: bottom;text-align: right;">
-            <a href="https://www.facebook.com/sendaviva/" style="text-decoration: none;color: #000;">
-              <img src="https://sendaviva.github.io/firma/images/icon-facebook.png" style="text-decoration: none;color: #000;">
+            <a href="https://www.facebook.com/sendaviva/" style="text-decoration: none;color: #000;vertical-align: text-bottom;margin-left: 7px;">
+              <img src="https://sendaviva.github.io/firma/images/icon-facebook.png" style="text-decoration: none;color: #000;vertical-align: text-bottom;">
             </a>
-            <a href="https://www.instagram.com/sendavivaoficial/?hl=es" style="text-decoration: none;color: #000;">
+            <a href="https://www.instagram.com/sendavivaoficial/?hl=es" style="text-decoration: none;color: #000;vertical-align: text-bottom;">
               <img src="https://sendaviva.github.io/firma/images/icon-instagram.png">
             </a>
-            <a href="https://twitter.com/sendaviva" style="text-decoration: none;color: #000;">
+            <a href="https://twitter.com/sendaviva" style="text-decoration: none;color: #000;vertical-align: text-bottom;">
               <img src="https://sendaviva.github.io/firma/images/icon-twitter.png">
             </a>
-            <a href="https://www.tiktok.com/tag/sendaviva?lang=es" style="text-decoration: none;color: #000;">
+            <a href="https://www.tiktok.com/tag/sendaviva?lang=es" style="text-decoration: none;color: #000;vertical-align: text-bottom;">
               <img src="https://sendaviva.github.io/firma/images/icon-TikTok.png">
             </a>
-            <a href="https://www.youtube.com/user/sendavivaoficial" style="text-decoration: none;color: #000;">
+            <a href="https://www.youtube.com/user/sendavivaoficial" style="text-decoration: none;color: #000;vertical-align: text-bottom;">
               <img src="https://sendaviva.github.io/firma/images/icon-YouTube.png">
             </a>
-            <a href="https://sendaviva.com/" style="text-decoration: none;color: #000;font-size: 12px;padding-left: 3px;">
+            <a href="https://sendaviva.com/" style="text-decoration: none;color: #000;vertical-align: text-bottom;font-size: 12px;padding-left: 3px;">
               <img src="https://sendaviva.github.io/firma/images/icon-web.png">
               www.sendaviva.com
             </a>
@@ -120,7 +119,6 @@
         const copyButton = document.querySelector('.copy-button');
         const codeContainer = document.getElementById('code-container');
         const template = Handlebars.compile(document.getElementById('firma-content').innerHTML);
-
 
         signatureForm.addEventListener('submit', (event) => {
             event.preventDefault();
